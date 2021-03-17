@@ -18,7 +18,7 @@ const ContactList = ({ contacts, onDelete}) =>(
               
             {contacts.map(({ id, name, number }) =>
                 <CSSTransition key={id} classNames={s} timeout={250}>
-                <li key={id} ><p>{name}: {number} </p>
+                <li className={s.contact} key={id} ><span>{name}: {number} </span>
                   <button className={b.Button} type="button" onClick={() => onDelete(id)} >Delete</button>
                 </li>
                  </CSSTransition>
